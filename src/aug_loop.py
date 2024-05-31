@@ -1,7 +1,7 @@
 from pathlib import Path
 from .workflow import modificate_workflow_v5
 import numpy as np
-from inf import ComfyRunner
+from comfy_runner.inf import ComfyRunner
 
 
 def run_augmentation(data_images_path: str, data_masks_path: str,
