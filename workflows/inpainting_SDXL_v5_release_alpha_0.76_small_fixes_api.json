@@ -1,0 +1,2342 @@
+{
+  "1": {
+    "inputs": {
+      "text": [
+        "167",
+        0
+      ],
+      "clip": [
+        "3",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "2": {
+    "inputs": {
+      "text": [
+        "168",
+        0
+      ],
+      "clip": [
+        "3",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "3": {
+    "inputs": {
+      "ckpt_name": "v1-5-pruned.ckpt"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "4": {
+    "inputs": {
+      "strength": 0.4,
+      "conditioning": [
+        "142",
+        0
+      ],
+      "control_net": [
+        "14",
+        0
+      ],
+      "image": [
+        "144",
+        0
+      ]
+    },
+    "class_type": "ControlNetApply",
+    "_meta": {
+      "title": "Apply ControlNet"
+    }
+  },
+  "8": {
+    "inputs": {
+      "seed": [
+        "166",
+        0
+      ],
+      "steps": 20,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 1,
+      "model": [
+        "141",
+        0
+      ],
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "2",
+        0
+      ],
+      "latent_image": [
+        "257",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "14": {
+    "inputs": {
+      "control_net_name": "control_v11p_sd15_softedge.pth"
+    },
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "Load ControlNet Model"
+    }
+  },
+  "15": {
+    "inputs": {
+      "images": [
+        "183",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "16": {
+    "inputs": {
+      "images": [
+        "182",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "19": {
+    "inputs": {
+      "image": [
+        "183",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "Invert Image"
+    }
+  },
+  "24": {
+    "inputs": {
+      "samples": [
+        "8",
+        0
+      ],
+      "vae": [
+        "3",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "25": {
+    "inputs": {
+      "images": [
+        "24",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "28": {
+    "inputs": {
+      "ipadapter_file": "ip-adapter_sd15.safetensors"
+    },
+    "class_type": "IPAdapterModelLoader",
+    "_meta": {
+      "title": "IPAdapter Model Loader"
+    }
+  },
+  "30": {
+    "inputs": {
+      "weight": 0.5,
+      "weight_type": "linear",
+      "start_at": 0,
+      "end_at": 1,
+      "embeds_scaling": "V only",
+      "model": [
+        "3",
+        0
+      ],
+      "ipadapter": [
+        "28",
+        0
+      ],
+      "pos_embed": [
+        "44",
+        0
+      ],
+      "clip_vision": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "IPAdapterEmbeds",
+    "_meta": {
+      "title": "IPAdapter Embeds"
+    }
+  },
+  "31": {
+    "inputs": {
+      "weight": 1,
+      "ipadapter": [
+        "28",
+        0
+      ],
+      "image": [
+        "37",
+        0
+      ],
+      "clip_vision": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "IPAdapterEncoder",
+    "_meta": {
+      "title": "IPAdapter Encoder"
+    }
+  },
+  "32": {
+    "inputs": {
+      "clip_name": "CLIP-ViT-H-14.bin"
+    },
+    "class_type": "CLIPVisionLoader",
+    "_meta": {
+      "title": "Load CLIP Vision"
+    }
+  },
+  "35": {
+    "inputs": {
+      "seed": 0,
+      "denoise_steps": 2,
+      "n_repeat": 3,
+      "regularizer_strength": 0.02,
+      "reduction_method": "median",
+      "max_iter": 5,
+      "tol": 0.001,
+      "invert": true,
+      "keep_model_loaded": true,
+      "n_repeat_batch_size": 2,
+      "use_fp16": true,
+      "scheduler": "LCMScheduler",
+      "normalize": true,
+      "model": "marigold-lcm-v1-0",
+      "image": [
+        "182",
+        0
+      ]
+    },
+    "class_type": "MarigoldDepthEstimation",
+    "_meta": {
+      "title": "MarigoldDepthEstimation"
+    }
+  },
+  "36": {
+    "inputs": {
+      "images": [
+        "35",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "37": {
+    "inputs": {
+      "path_to_images_folder": [
+        "311",
+        0
+      ],
+      "embeddings_database_name": [
+        "313",
+        0
+      ],
+      "path_to_masks_folder": [
+        "312",
+        0
+      ],
+      "path_to_embeddings_databases": "None",
+      "offset": 0,
+      "image": [
+        "182",
+        0
+      ],
+      "clip_vision": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "CloseImagesSearcher",
+    "_meta": {
+      "title": "Close Images Searcher"
+    }
+  },
+  "40": {
+    "inputs": {
+      "weight": 1,
+      "ipadapter": [
+        "28",
+        0
+      ],
+      "image": [
+        "37",
+        1
+      ],
+      "clip_vision": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "IPAdapterEncoder",
+    "_meta": {
+      "title": "IPAdapter Encoder"
+    }
+  },
+  "41": {
+    "inputs": {
+      "weight": 1,
+      "ipadapter": [
+        "28",
+        0
+      ],
+      "image": [
+        "37",
+        2
+      ],
+      "clip_vision": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "IPAdapterEncoder",
+    "_meta": {
+      "title": "IPAdapter Encoder"
+    }
+  },
+  "42": {
+    "inputs": {
+      "weight": 1,
+      "ipadapter": [
+        "28",
+        0
+      ],
+      "image": [
+        "37",
+        3
+      ],
+      "clip_vision": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "IPAdapterEncoder",
+    "_meta": {
+      "title": "IPAdapter Encoder"
+    }
+  },
+  "43": {
+    "inputs": {
+      "weight": 1,
+      "ipadapter": [
+        "28",
+        0
+      ],
+      "image": [
+        "37",
+        4
+      ],
+      "clip_vision": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "IPAdapterEncoder",
+    "_meta": {
+      "title": "IPAdapter Encoder"
+    }
+  },
+  "44": {
+    "inputs": {
+      "method": "average",
+      "embed1": [
+        "31",
+        0
+      ],
+      "embed2": [
+        "40",
+        0
+      ],
+      "embed3": [
+        "41",
+        0
+      ],
+      "embed4": [
+        "42",
+        0
+      ],
+      "embed5": [
+        "43",
+        0
+      ]
+    },
+    "class_type": "IPAdapterCombineEmbeds",
+    "_meta": {
+      "title": "IPAdapter Combine Embeds"
+    }
+  },
+  "49": {
+    "inputs": {
+      "method": "intensity",
+      "image": [
+        "19",
+        0
+      ]
+    },
+    "class_type": "Image To Mask",
+    "_meta": {
+      "title": "Image To Mask"
+    }
+  },
+  "55": {
+    "inputs": {
+      "image": [
+        "37",
+        5
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "Invert Image"
+    }
+  },
+  "56": {
+    "inputs": {
+      "image": [
+        "37",
+        6
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "Invert Image"
+    }
+  },
+  "57": {
+    "inputs": {
+      "image": [
+        "37",
+        7
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "Invert Image"
+    }
+  },
+  "58": {
+    "inputs": {
+      "image": [
+        "37",
+        8
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "Invert Image"
+    }
+  },
+  "61": {
+    "inputs": {
+      "weight": -0.5,
+      "weight_type": "linear",
+      "start_at": 0,
+      "end_at": 1,
+      "embeds_scaling": "V only",
+      "model": [
+        "30",
+        0
+      ],
+      "ipadapter": [
+        "63",
+        0
+      ],
+      "pos_embed": [
+        "89",
+        0
+      ],
+      "clip_vision": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "IPAdapterEmbeds",
+    "_meta": {
+      "title": "IPAdapter Embeds"
+    }
+  },
+  "63": {
+    "inputs": {
+      "ipadapter_file": "ip-adapter-plus_sd15.bin"
+    },
+    "class_type": "IPAdapterModelLoader",
+    "_meta": {
+      "title": "IPAdapter Model Loader"
+    }
+  },
+  "64": {
+    "inputs": {
+      "weight": 1,
+      "ipadapter": [
+        "63",
+        0
+      ],
+      "image": [
+        "37",
+        0
+      ],
+      "clip_vision": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "IPAdapterEncoder",
+    "_meta": {
+      "title": "IPAdapter Encoder"
+    }
+  },
+  "65": {
+    "inputs": {
+      "force_resize_width": 0,
+      "force_resize_height": 0,
+      "image": [
+        "37",
+        0
+      ],
+      "mask": [
+        "235",
+        0
+      ]
+    },
+    "class_type": "Cut By Mask",
+    "_meta": {
+      "title": "Cut By Mask"
+    }
+  },
+  "69": {
+    "inputs": {
+      "mask": [
+        "71",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "Convert Mask to Image"
+    }
+  },
+  "71": {
+    "inputs": {
+      "threshold": 0,
+      "masks": [
+        "74",
+        0
+      ]
+    },
+    "class_type": "Mask Dominant Region",
+    "_meta": {
+      "title": "Mask Dominant Region"
+    }
+  },
+  "74": {
+    "inputs": {
+      "channel": "green",
+      "image": [
+        "55",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "Convert Image to Mask"
+    }
+  },
+  "78": {
+    "inputs": {
+      "image": [
+        "69",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "Invert Image"
+    }
+  },
+  "79": {
+    "inputs": {
+      "images": [
+        "65",
+        0
+      ]
+    },
+    "class_type": "Images to RGB",
+    "_meta": {
+      "title": "Images to RGB"
+    }
+  },
+  "80": {
+    "inputs": {
+      "force_resize_width": 0,
+      "force_resize_height": 0,
+      "image": [
+        "235",
+        0
+      ],
+      "mask": [
+        "235",
+        0
+      ]
+    },
+    "class_type": "Cut By Mask",
+    "_meta": {
+      "title": "Cut By Mask"
+    }
+  },
+  "82": {
+    "inputs": {
+      "images": [
+        "80",
+        0
+      ]
+    },
+    "class_type": "Images to RGB",
+    "_meta": {
+      "title": "Images to RGB"
+    }
+  },
+  "84": {
+    "inputs": {
+      "weight": 1,
+      "ipadapter": [
+        "63",
+        0
+      ],
+      "image": [
+        "79",
+        0
+      ],
+      "mask": [
+        "85",
+        0
+      ],
+      "clip_vision": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "IPAdapterEncoder",
+    "_meta": {
+      "title": "IPAdapter Encoder"
+    }
+  },
+  "85": {
+    "inputs": {
+      "method": "intensity",
+      "image": [
+        "82",
+        0
+      ]
+    },
+    "class_type": "Image To Mask",
+    "_meta": {
+      "title": "Image To Mask"
+    }
+  },
+  "89": {
+    "inputs": {
+      "method": "concat",
+      "embed1": [
+        "84",
+        0
+      ],
+      "embed2": [
+        "98",
+        0
+      ],
+      "embed3": [
+        "108",
+        0
+      ],
+      "embed4": [
+        "118",
+        0
+      ],
+      "embed5": [
+        "128",
+        0
+      ]
+    },
+    "class_type": "IPAdapterCombineEmbeds",
+    "_meta": {
+      "title": "IPAdapter Combine Embeds"
+    }
+  },
+  "90": {
+    "inputs": {
+      "force_resize_width": 0,
+      "force_resize_height": 0,
+      "image": [
+        "37",
+        1
+      ],
+      "mask": [
+        "234",
+        0
+      ]
+    },
+    "class_type": "Cut By Mask",
+    "_meta": {
+      "title": "Cut By Mask"
+    }
+  },
+  "91": {
+    "inputs": {
+      "mask": [
+        "92",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "Convert Mask to Image"
+    }
+  },
+  "92": {
+    "inputs": {
+      "threshold": 0,
+      "masks": [
+        "93",
+        0
+      ]
+    },
+    "class_type": "Mask Dominant Region",
+    "_meta": {
+      "title": "Mask Dominant Region"
+    }
+  },
+  "93": {
+    "inputs": {
+      "channel": "green",
+      "image": [
+        "56",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "Convert Image to Mask"
+    }
+  },
+  "94": {
+    "inputs": {
+      "image": [
+        "91",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "Invert Image"
+    }
+  },
+  "95": {
+    "inputs": {
+      "images": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "Images to RGB",
+    "_meta": {
+      "title": "Images to RGB"
+    }
+  },
+  "96": {
+    "inputs": {
+      "force_resize_width": 0,
+      "force_resize_height": 0,
+      "image": [
+        "234",
+        0
+      ],
+      "mask": [
+        "234",
+        0
+      ]
+    },
+    "class_type": "Cut By Mask",
+    "_meta": {
+      "title": "Cut By Mask"
+    }
+  },
+  "97": {
+    "inputs": {
+      "images": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "Images to RGB",
+    "_meta": {
+      "title": "Images to RGB"
+    }
+  },
+  "98": {
+    "inputs": {
+      "weight": 1,
+      "ipadapter": [
+        "63",
+        0
+      ],
+      "image": [
+        "95",
+        0
+      ],
+      "mask": [
+        "99",
+        0
+      ],
+      "clip_vision": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "IPAdapterEncoder",
+    "_meta": {
+      "title": "IPAdapter Encoder"
+    }
+  },
+  "99": {
+    "inputs": {
+      "method": "intensity",
+      "image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "Image To Mask",
+    "_meta": {
+      "title": "Image To Mask"
+    }
+  },
+  "100": {
+    "inputs": {
+      "force_resize_width": 0,
+      "force_resize_height": 0,
+      "image": [
+        "37",
+        2
+      ],
+      "mask": [
+        "233",
+        0
+      ]
+    },
+    "class_type": "Cut By Mask",
+    "_meta": {
+      "title": "Cut By Mask"
+    }
+  },
+  "101": {
+    "inputs": {
+      "mask": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "Convert Mask to Image"
+    }
+  },
+  "102": {
+    "inputs": {
+      "threshold": 0,
+      "masks": [
+        "103",
+        0
+      ]
+    },
+    "class_type": "Mask Dominant Region",
+    "_meta": {
+      "title": "Mask Dominant Region"
+    }
+  },
+  "103": {
+    "inputs": {
+      "channel": "green",
+      "image": [
+        "57",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "Convert Image to Mask"
+    }
+  },
+  "104": {
+    "inputs": {
+      "image": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "Invert Image"
+    }
+  },
+  "105": {
+    "inputs": {
+      "images": [
+        "100",
+        0
+      ]
+    },
+    "class_type": "Images to RGB",
+    "_meta": {
+      "title": "Images to RGB"
+    }
+  },
+  "106": {
+    "inputs": {
+      "force_resize_width": 0,
+      "force_resize_height": 0,
+      "image": [
+        "233",
+        0
+      ],
+      "mask": [
+        "233",
+        0
+      ]
+    },
+    "class_type": "Cut By Mask",
+    "_meta": {
+      "title": "Cut By Mask"
+    }
+  },
+  "107": {
+    "inputs": {
+      "images": [
+        "106",
+        0
+      ]
+    },
+    "class_type": "Images to RGB",
+    "_meta": {
+      "title": "Images to RGB"
+    }
+  },
+  "108": {
+    "inputs": {
+      "weight": 1,
+      "ipadapter": [
+        "63",
+        0
+      ],
+      "image": [
+        "105",
+        0
+      ],
+      "mask": [
+        "109",
+        0
+      ],
+      "clip_vision": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "IPAdapterEncoder",
+    "_meta": {
+      "title": "IPAdapter Encoder"
+    }
+  },
+  "109": {
+    "inputs": {
+      "method": "intensity",
+      "image": [
+        "107",
+        0
+      ]
+    },
+    "class_type": "Image To Mask",
+    "_meta": {
+      "title": "Image To Mask"
+    }
+  },
+  "110": {
+    "inputs": {
+      "force_resize_width": 0,
+      "force_resize_height": 0,
+      "image": [
+        "37",
+        3
+      ],
+      "mask": [
+        "230",
+        0
+      ]
+    },
+    "class_type": "Cut By Mask",
+    "_meta": {
+      "title": "Cut By Mask"
+    }
+  },
+  "111": {
+    "inputs": {
+      "mask": [
+        "112",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "Convert Mask to Image"
+    }
+  },
+  "112": {
+    "inputs": {
+      "threshold": 0,
+      "masks": [
+        "113",
+        0
+      ]
+    },
+    "class_type": "Mask Dominant Region",
+    "_meta": {
+      "title": "Mask Dominant Region"
+    }
+  },
+  "113": {
+    "inputs": {
+      "channel": "green",
+      "image": [
+        "58",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "Convert Image to Mask"
+    }
+  },
+  "114": {
+    "inputs": {
+      "image": [
+        "111",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "Invert Image"
+    }
+  },
+  "115": {
+    "inputs": {
+      "images": [
+        "110",
+        0
+      ]
+    },
+    "class_type": "Images to RGB",
+    "_meta": {
+      "title": "Images to RGB"
+    }
+  },
+  "116": {
+    "inputs": {
+      "force_resize_width": 0,
+      "force_resize_height": 0,
+      "image": [
+        "230",
+        0
+      ],
+      "mask": [
+        "230",
+        0
+      ]
+    },
+    "class_type": "Cut By Mask",
+    "_meta": {
+      "title": "Cut By Mask"
+    }
+  },
+  "117": {
+    "inputs": {
+      "images": [
+        "116",
+        0
+      ]
+    },
+    "class_type": "Images to RGB",
+    "_meta": {
+      "title": "Images to RGB"
+    }
+  },
+  "118": {
+    "inputs": {
+      "weight": 1,
+      "ipadapter": [
+        "63",
+        0
+      ],
+      "image": [
+        "115",
+        0
+      ],
+      "mask": [
+        "119",
+        0
+      ],
+      "clip_vision": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "IPAdapterEncoder",
+    "_meta": {
+      "title": "IPAdapter Encoder"
+    }
+  },
+  "119": {
+    "inputs": {
+      "method": "intensity",
+      "image": [
+        "117",
+        0
+      ]
+    },
+    "class_type": "Image To Mask",
+    "_meta": {
+      "title": "Image To Mask"
+    }
+  },
+  "120": {
+    "inputs": {
+      "force_resize_width": 0,
+      "force_resize_height": 0,
+      "image": [
+        "37",
+        4
+      ],
+      "mask": [
+        "232",
+        0
+      ]
+    },
+    "class_type": "Cut By Mask",
+    "_meta": {
+      "title": "Cut By Mask"
+    }
+  },
+  "121": {
+    "inputs": {
+      "mask": [
+        "122",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "Convert Mask to Image"
+    }
+  },
+  "122": {
+    "inputs": {
+      "threshold": 0,
+      "masks": [
+        "123",
+        0
+      ]
+    },
+    "class_type": "Mask Dominant Region",
+    "_meta": {
+      "title": "Mask Dominant Region"
+    }
+  },
+  "123": {
+    "inputs": {
+      "channel": "green",
+      "image": [
+        "322",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "Convert Image to Mask"
+    }
+  },
+  "124": {
+    "inputs": {
+      "image": [
+        "121",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "Invert Image"
+    }
+  },
+  "125": {
+    "inputs": {
+      "images": [
+        "120",
+        0
+      ]
+    },
+    "class_type": "Images to RGB",
+    "_meta": {
+      "title": "Images to RGB"
+    }
+  },
+  "126": {
+    "inputs": {
+      "force_resize_width": 0,
+      "force_resize_height": 0,
+      "image": [
+        "232",
+        0
+      ],
+      "mask": [
+        "232",
+        0
+      ]
+    },
+    "class_type": "Cut By Mask",
+    "_meta": {
+      "title": "Cut By Mask"
+    }
+  },
+  "127": {
+    "inputs": {
+      "images": [
+        "126",
+        0
+      ]
+    },
+    "class_type": "Images to RGB",
+    "_meta": {
+      "title": "Images to RGB"
+    }
+  },
+  "128": {
+    "inputs": {
+      "weight": 1,
+      "ipadapter": [
+        "63",
+        0
+      ],
+      "image": [
+        "125",
+        0
+      ],
+      "mask": [
+        "129",
+        0
+      ],
+      "clip_vision": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "IPAdapterEncoder",
+    "_meta": {
+      "title": "IPAdapter Encoder"
+    }
+  },
+  "129": {
+    "inputs": {
+      "method": "intensity",
+      "image": [
+        "127",
+        0
+      ]
+    },
+    "class_type": "Image To Mask",
+    "_meta": {
+      "title": "Image To Mask"
+    }
+  },
+  "134": {
+    "inputs": {
+      "expand": -3,
+      "tapered_corners": true,
+      "mask": [
+        "49",
+        0
+      ]
+    },
+    "class_type": "GrowMask",
+    "_meta": {
+      "title": "GrowMask"
+    }
+  },
+  "141": {
+    "inputs": {
+      "weight": 0.25,
+      "weight_type": "linear",
+      "start_at": 0,
+      "end_at": 1,
+      "embeds_scaling": "V only",
+      "model": [
+        "61",
+        0
+      ],
+      "ipadapter": [
+        "63",
+        0
+      ],
+      "pos_embed": [
+        "64",
+        0
+      ],
+      "clip_vision": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "IPAdapterEmbeds",
+    "_meta": {
+      "title": "IPAdapter Embeds"
+    }
+  },
+  "142": {
+    "inputs": {
+      "strength": 0.4,
+      "conditioning": [
+        "327",
+        0
+      ],
+      "control_net": [
+        "143",
+        0
+      ],
+      "image": [
+        "35",
+        0
+      ]
+    },
+    "class_type": "ControlNetApply",
+    "_meta": {
+      "title": "Apply ControlNet"
+    }
+  },
+  "143": {
+    "inputs": {
+      "control_net_name": "control_v11f1p_sd15_depth.pth"
+    },
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "Load ControlNet Model"
+    }
+  },
+  "144": {
+    "inputs": {
+      "safe": "enable",
+      "resolution": [
+        "314",
+        1
+      ],
+      "image": [
+        "182",
+        0
+      ]
+    },
+    "class_type": "PiDiNetPreprocessor",
+    "_meta": {
+      "title": "PiDiNet Soft-Edge Lines"
+    }
+  },
+  "146": {
+    "inputs": {
+      "images": [
+        "144",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "157": {
+    "inputs": {
+      "blend_percentage": 1,
+      "image_a": [
+        "340",
+        0
+      ],
+      "image_b": [
+        "339",
+        0
+      ],
+      "mask": [
+        "161",
+        0
+      ]
+    },
+    "class_type": "Image Blend by Mask",
+    "_meta": {
+      "title": "Image Blend by Mask"
+    }
+  },
+  "158": {
+    "inputs": {
+      "images": [
+        "157",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "161": {
+    "inputs": {
+      "mask": [
+        "321",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "Convert Mask to Image"
+    }
+  },
+  "166": {
+    "inputs": {
+      "seed": 579556953203522
+    },
+    "class_type": "seed _O",
+    "_meta": {
+      "title": "Seed"
+    }
+  },
+  "167": {
+    "inputs": {
+      "text": ""
+    },
+    "class_type": "Text _O",
+    "_meta": {
+      "title": "Positive Prompt"
+    }
+  },
+  "168": {
+    "inputs": {
+      "text": ""
+    },
+    "class_type": "Text _O",
+    "_meta": {
+      "title": "Negative Prompt"
+    }
+  },
+  "182": {
+    "inputs": {
+      "image": [
+        "309",
+        0
+      ]
+    },
+    "class_type": "LoadImageFromPath",
+    "_meta": {
+      "title": "Load Image From Path"
+    }
+  },
+  "183": {
+    "inputs": {
+      "image": [
+        "310",
+        0
+      ]
+    },
+    "class_type": "LoadImageFromPath",
+    "_meta": {
+      "title": "Load Image From Path"
+    }
+  },
+  "184": {
+    "inputs": {
+      "filename": "",
+      "path": "",
+      "extension": "png",
+      "steps": 20,
+      "cfg": 8,
+      "modelname": "",
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "positive": "unknown",
+      "negative": "unknown",
+      "seed_value": [
+        "166",
+        0
+      ],
+      "width": [
+        "242",
+        0
+      ],
+      "height": [
+        "242",
+        1
+      ],
+      "lossless_webp": true,
+      "quality_jpeg_or_webp": 100,
+      "optimize_png": false,
+      "counter": 0,
+      "denoise": 1,
+      "time_format": "%Y-%m-%d-%H%M%S",
+      "save_workflow_as_json": false,
+      "images": [
+        "157",
+        0
+      ]
+    },
+    "class_type": "Image Saver",
+    "_meta": {
+      "title": "Image Saver"
+    }
+  },
+  "230": {
+    "inputs": {
+      "op": "difference",
+      "clamp_result": "yes",
+      "round_result": "no",
+      "image1": [
+        "114",
+        0
+      ],
+      "image2": [
+        "58",
+        0
+      ]
+    },
+    "class_type": "Combine Masks",
+    "_meta": {
+      "title": "Combine Masks"
+    }
+  },
+  "232": {
+    "inputs": {
+      "op": "difference",
+      "clamp_result": "yes",
+      "round_result": "no",
+      "image1": [
+        "124",
+        0
+      ],
+      "image2": [
+        "322",
+        0
+      ]
+    },
+    "class_type": "Combine Masks",
+    "_meta": {
+      "title": "Combine Masks"
+    }
+  },
+  "233": {
+    "inputs": {
+      "op": "difference",
+      "clamp_result": "yes",
+      "round_result": "no",
+      "image1": [
+        "104",
+        0
+      ],
+      "image2": [
+        "57",
+        0
+      ]
+    },
+    "class_type": "Combine Masks",
+    "_meta": {
+      "title": "Combine Masks"
+    }
+  },
+  "234": {
+    "inputs": {
+      "op": "difference",
+      "clamp_result": "yes",
+      "round_result": "no",
+      "image1": [
+        "94",
+        0
+      ],
+      "image2": [
+        "56",
+        0
+      ]
+    },
+    "class_type": "Combine Masks",
+    "_meta": {
+      "title": "Combine Masks"
+    }
+  },
+  "235": {
+    "inputs": {
+      "op": "difference",
+      "clamp_result": "yes",
+      "round_result": "no",
+      "image1": [
+        "78",
+        0
+      ],
+      "image2": [
+        "55",
+        0
+      ]
+    },
+    "class_type": "Combine Masks",
+    "_meta": {
+      "title": "Combine Masks"
+    }
+  },
+  "237": {
+    "inputs": {
+      "images": [
+        "79",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "238": {
+    "inputs": {
+      "images": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "239": {
+    "inputs": {
+      "images": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "240": {
+    "inputs": {
+      "images": [
+        "115",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "241": {
+    "inputs": {
+      "images": [
+        "125",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "242": {
+    "inputs": {
+      "image": [
+        "157",
+        0
+      ]
+    },
+    "class_type": "Get Image Size",
+    "_meta": {
+      "title": "Get Image Size"
+    }
+  },
+  "254": {
+    "inputs": {
+      "mask_offset": 0,
+      "pixels": [
+        "282",
+        0
+      ],
+      "vae": [
+        "3",
+        2
+      ],
+      "mask": [
+        "289",
+        0
+      ]
+    },
+    "class_type": "VAEEncodeForInpaint (WAS)",
+    "_meta": {
+      "title": "Inpainting VAE Encode (WAS)"
+    }
+  },
+  "255": {
+    "inputs": {
+      "pixels": [
+        "282",
+        0
+      ],
+      "vae": [
+        "3",
+        2
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "257": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "resize_source": false,
+      "destination": [
+        "254",
+        0
+      ],
+      "source": [
+        "255",
+        0
+      ]
+    },
+    "class_type": "LatentCompositeMasked",
+    "_meta": {
+      "title": "LatentCompositeMasked"
+    }
+  },
+  "259": {
+    "inputs": {
+      "seed": [
+        "166",
+        0
+      ],
+      "steps": 20,
+      "cfg": 2,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 1,
+      "model": [
+        "269",
+        0
+      ],
+      "positive": [
+        "275",
+        0
+      ],
+      "negative": [
+        "2",
+        0
+      ],
+      "latent_image": [
+        "281",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "260": {
+    "inputs": {
+      "image1": [
+        "182",
+        0
+      ],
+      "image2": [
+        "263",
+        0
+      ],
+      "mask": [
+        "285",
+        0
+      ]
+    },
+    "class_type": "Mix Images By Mask",
+    "_meta": {
+      "title": "Mix Images By Mask"
+    }
+  },
+  "263": {
+    "inputs": {
+      "image": [
+        "183",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "Invert Image"
+    }
+  },
+  "269": {
+    "inputs": {
+      "weight": 1,
+      "weight_type": "linear",
+      "start_at": 0,
+      "end_at": 1,
+      "embeds_scaling": "V only",
+      "model": [
+        "3",
+        0
+      ],
+      "ipadapter": [
+        "63",
+        0
+      ],
+      "pos_embed": [
+        "270",
+        0
+      ],
+      "clip_vision": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "IPAdapterEmbeds",
+    "_meta": {
+      "title": "IPAdapter Embeds"
+    }
+  },
+  "270": {
+    "inputs": {
+      "weight": 1,
+      "ipadapter": [
+        "63",
+        0
+      ],
+      "image": [
+        "260",
+        0
+      ],
+      "clip_vision": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "IPAdapterEncoder",
+    "_meta": {
+      "title": "IPAdapter Encoder"
+    }
+  },
+  "271": {
+    "inputs": {
+      "samples": [
+        "259",
+        0
+      ],
+      "vae": [
+        "3",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "272": {
+    "inputs": {
+      "images": [
+        "271",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "275": {
+    "inputs": {
+      "strength": 0.4,
+      "conditioning": [
+        "304",
+        0
+      ],
+      "control_net": [
+        "276",
+        0
+      ],
+      "image": [
+        "277",
+        0
+      ]
+    },
+    "class_type": "ControlNetApply",
+    "_meta": {
+      "title": "Apply ControlNet"
+    }
+  },
+  "276": {
+    "inputs": {
+      "control_net_name": "control_v11p_sd15_softedge.pth"
+    },
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "Load ControlNet Model"
+    }
+  },
+  "277": {
+    "inputs": {
+      "safe": "enable",
+      "resolution": [
+        "316",
+        1
+      ],
+      "image": [
+        "260",
+        0
+      ]
+    },
+    "class_type": "PiDiNetPreprocessor",
+    "_meta": {
+      "title": "PiDiNet Soft-Edge Lines"
+    }
+  },
+  "281": {
+    "inputs": {
+      "pixels": [
+        "260",
+        0
+      ],
+      "vae": [
+        "3",
+        2
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "282": {
+    "inputs": {
+      "image1": [
+        "339",
+        0
+      ],
+      "image2": [
+        "182",
+        0
+      ],
+      "mask": [
+        "286",
+        0
+      ]
+    },
+    "class_type": "Mix Images By Mask",
+    "_meta": {
+      "title": "Mix Images By Mask"
+    }
+  },
+  "285": {
+    "inputs": {
+      "mask": [
+        "134",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "Convert Mask to Image"
+    }
+  },
+  "286": {
+    "inputs": {
+      "mask": [
+        "134",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "Convert Mask to Image"
+    }
+  },
+  "289": {
+    "inputs": {
+      "expand": 1,
+      "tapered_corners": true,
+      "mask": [
+        "134",
+        0
+      ]
+    },
+    "class_type": "GrowMask",
+    "_meta": {
+      "title": "GrowMask"
+    }
+  },
+  "290": {
+    "inputs": {
+      "images": [
+        "277",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "304": {
+    "inputs": {
+      "strength": 1,
+      "conditioning": [
+        "1",
+        0
+      ],
+      "control_net": [
+        "305",
+        0
+      ],
+      "image": [
+        "306",
+        0
+      ]
+    },
+    "class_type": "ControlNetApply",
+    "_meta": {
+      "title": "Apply ControlNet"
+    }
+  },
+  "305": {
+    "inputs": {
+      "control_net_name": "control_v11p_sd15_canny.safetensors"
+    },
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "Load ControlNet Model"
+    }
+  },
+  "306": {
+    "inputs": {
+      "low_threshold": 0.01,
+      "high_threshold": 0.01,
+      "image": [
+        "260",
+        0
+      ]
+    },
+    "class_type": "Canny",
+    "_meta": {
+      "title": "Canny"
+    }
+  },
+  "307": {
+    "inputs": {
+      "images": [
+        "306",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "309": {
+    "inputs": {
+      "Text": "C:\\Users\\PnthrLeo\\Desktop\\yolo-rooftops\\data\\rooftops\\rooftops-orig\\train\\images\\01-77-_jpg.rf.eee1e3c053f6c36fc81471cf29cdd85d.jpg"
+    },
+    "class_type": "DF_Text",
+    "_meta": {
+      "title": "Text"
+    }
+  },
+  "310": {
+    "inputs": {
+      "Text": "C:\\Users\\PnthrLeo\\Desktop\\yolo-rooftops\\data\\rooftops\\rooftops-orig\\train\\masks\\01-77-_jpg.rf.eee1e3c053f6c36fc81471cf29cdd85d.png"
+    },
+    "class_type": "DF_Text",
+    "_meta": {
+      "title": "Text"
+    }
+  },
+  "311": {
+    "inputs": {
+      "Text": "C:\\Users\\PnthrLeo\\Desktop\\yolo-rooftops\\data\\rooftops\\rooftops-orig\\train\\images"
+    },
+    "class_type": "DF_Text",
+    "_meta": {
+      "title": "Text"
+    }
+  },
+  "312": {
+    "inputs": {
+      "Text": "C:\\Users\\PnthrLeo\\Desktop\\yolo-rooftops\\data\\rooftops\\rooftops-orig\\train\\masks"
+    },
+    "class_type": "DF_Text",
+    "_meta": {
+      "title": "Text"
+    }
+  },
+  "313": {
+    "inputs": {
+      "Text": "rooftops"
+    },
+    "class_type": "DF_Text",
+    "_meta": {
+      "title": "Text"
+    }
+  },
+  "314": {
+    "inputs": {
+      "image": [
+        "182",
+        0
+      ]
+    },
+    "class_type": "DF_Get_image_size",
+    "_meta": {
+      "title": "Get image size"
+    }
+  },
+  "316": {
+    "inputs": {
+      "image": [
+        "260",
+        0
+      ]
+    },
+    "class_type": "DF_Get_image_size",
+    "_meta": {
+      "title": "Get image size"
+    }
+  },
+  "318": {
+    "inputs": {
+      "method": "intensity",
+      "image": [
+        "183",
+        0
+      ]
+    },
+    "class_type": "Image To Mask",
+    "_meta": {
+      "title": "Image To Mask"
+    }
+  },
+  "321": {
+    "inputs": {
+      "mask": [
+        "289",
+        0
+      ]
+    },
+    "class_type": "InvertMask",
+    "_meta": {
+      "title": "InvertMask"
+    }
+  },
+  "322": {
+    "inputs": {
+      "image": [
+        "37",
+        9
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "Invert Image"
+    }
+  },
+  "325": {
+    "inputs": {
+      "control_net_name": "control_v11p_sd15_canny.safetensors"
+    },
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "Load ControlNet Model"
+    }
+  },
+  "327": {
+    "inputs": {
+      "strength": 0.9,
+      "conditioning": [
+        "1",
+        0
+      ],
+      "control_net": [
+        "325",
+        0
+      ],
+      "image": [
+        "328",
+        0
+      ]
+    },
+    "class_type": "ControlNetApply",
+    "_meta": {
+      "title": "Apply ControlNet"
+    }
+  },
+  "328": {
+    "inputs": {
+      "low_threshold": 0.01,
+      "high_threshold": 0.01,
+      "image": [
+        "182",
+        0
+      ]
+    },
+    "class_type": "Canny",
+    "_meta": {
+      "title": "Canny"
+    }
+  },
+  "329": {
+    "inputs": {
+      "images": [
+        "328",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "330": {
+    "inputs": {
+      "images": [
+        "182",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "333": {
+    "inputs": {
+      "image": [
+        "260",
+        0
+      ]
+    },
+    "class_type": "DF_Get_image_size",
+    "_meta": {
+      "title": "Get image size"
+    }
+  },
+  "339": {
+    "inputs": {
+      "image_gen_width": [
+        "333",
+        0
+      ],
+      "image_gen_height": [
+        "333",
+        1
+      ],
+      "resize_mode": "Just Resize",
+      "hint_image": [
+        "271",
+        0
+      ]
+    },
+    "class_type": "HintImageEnchance",
+    "_meta": {
+      "title": "Enchance And Resize Hint Images"
+    }
+  },
+  "340": {
+    "inputs": {
+      "image_gen_width": [
+        "341",
+        0
+      ],
+      "image_gen_height": [
+        "341",
+        1
+      ],
+      "resize_mode": "Just Resize",
+      "hint_image": [
+        "24",
+        0
+      ]
+    },
+    "class_type": "HintImageEnchance",
+    "_meta": {
+      "title": "Enchance And Resize Hint Images"
+    }
+  },
+  "341": {
+    "inputs": {
+      "image": [
+        "182",
+        0
+      ]
+    },
+    "class_type": "Get Image Size",
+    "_meta": {
+      "title": "Get Image Size"
+    }
+  }
+}
