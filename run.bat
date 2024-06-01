@@ -1,4 +1,4 @@
-call ./venv/bin/activate.bat
+call ./venv/Scripts/activate.bat
 set data_images_path="/path/to/data/images"
 set data_masks_path="/path/to/data/masks"
 set output_path="/path/to/output/folder"

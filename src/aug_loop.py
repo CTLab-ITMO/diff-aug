@@ -47,10 +47,9 @@ def run_augmentation(data_images_path: str, data_masks_path: str,
     assert Path(output_path).exists(), \
         f'Path {output_path} does not exist'
 
-    data_images_path = Path(data_images_path)
-    image_list = (list(data_images_path.glob('*.jpg')) +
-                  list(data_images_path.glob('*.png')) +
-                  list(data_images_path.glob('*.jpeg')))
+    image_list = (list(Path(data_images_path).glob('*.jpg')) +
+                  list(Path(data_images_path).glob('*.png')) +
+                  list(Path(data_images_path).glob('*.jpeg')))
 
     runner = ComfyRunner()
 
@@ -75,9 +74,23 @@ def run_augmentation(data_images_path: str, data_masks_path: str,
                                               dataset_name, positive_prompt,
                                               negative_prompt, gen_seed)
 
+        if not Path('ComfyUI\custom_nodes\comfyUI-image-search').exists():
             runner.predict(
                 workflow_input=pipeline,
-                stop_server_after_completion=False
+                stop_server_after_completion=False,
+                extra_node_urls=["https://github.com/PnthrLeo/comfyUI-image-search.git"],
+                extra_models_list=[
+                    {
+                        "filename": "v1-5-pruned-emaonly.safetensors",
+                        "url": "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.safetensors?download=true",
+                        "dest": "./ComfyUI/models/checkpoints/"
+                    }
+                ],
+            )
+        else:
+            runner.predict(
+                workflow_input=pipeline,
+                stop_server_after_completion=False,
             )
 
     runner.stop_server()

@@ -5,3 +5,6 @@ constants.py
 inf.py
 requirements.txt
 __pycache__
+ComfyUI
+*.log
+run_test.bat

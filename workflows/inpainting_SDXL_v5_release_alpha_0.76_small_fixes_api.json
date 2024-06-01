@@ -33,7 +33,7 @@
   },
   "3": {
     "inputs": {
-      "ckpt_name": "v1-5-pruned.ckpt"
+      "ckpt_name": "v1-5-pruned-emaonly.safetensors"
     },
     "class_type": "CheckpointLoaderSimple",
     "_meta": {
@@ -228,7 +228,7 @@
   },
   "32": {
     "inputs": {
-      "clip_name": "CLIP-ViT-H-14.bin"
+      "clip_name": "CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors"
     },
     "class_type": "CLIPVisionLoader",
     "_meta": {
@@ -2066,7 +2066,7 @@
   },
   "305": {
     "inputs": {
-      "control_net_name": "control_v11p_sd15_canny.safetensors"
+      "control_net_name": "control_v11p_sd15_canny.pth"
     },
     "class_type": "ControlNetLoader",
     "_meta": {
@@ -2207,7 +2207,7 @@
   },
   "325": {
     "inputs": {
-      "control_net_name": "control_v11p_sd15_canny.safetensors"
+      "control_net_name": "control_v11p_sd15_canny.pth"
     },
     "class_type": "ControlNetLoader",
     "_meta": {
