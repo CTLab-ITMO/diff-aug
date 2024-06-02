@@ -70,6 +70,23 @@ Generation examples on the [Rooftops](https://universe.roboflow.com/snowcity/roo
 
 ![image](https://github.com/CTLab-ITMO/diff-aug/assets/29786176/3259e468-a60a-446e-9850-f307138f5b2a)
 
+# Detection and Segmentation Results:
+For all experiments, we used the pretrained YOLOv8n with the default standard augmentations.
+
+Detection results for the [Potholes](https://universe.roboflow.com/final-project-iic7d/pothole-detection-system-new/dataset/1) dataset:
+| Data          | Precision | Recall | mAP50-95 |
+| ------------- |:---------:|:-----:|:-----:|
+| without our augmentation   | 0.647 ± 0.020 | 0.572 ± 0.010 | 0.304 ± 0.004 |
+| Diff-Aug (prev)            | 0.666 ± 0.019 | 0.552 ± 0.015 | **0.330 ± 0.003** |
+| Diff-Aug                   | 0.665 ± 0.012 | 0.565 ± 0.018 | **0.330 ± 0.004** |
+
+Segmentation results for the [Potholes](https://universe.roboflow.com/final-project-iic7d/pothole-detection-system-new/dataset/1) dataset:
+| Data          | Precision | Recall | mAP50-95 |
+| ------------- |:---------:|:-----:|:-----:|
+| without our augmentation   | 0.674 ± 0.012 | 0.556 ± 0.014 | 0.282 ± 0.004 |
+| Diff-Aug (prev)            | 0.666 ± 0.023 | 0.548 ± 0.013 | **0.294 ± 0.003** |
+| Diff-Aug                   | 0.660 ± 0.017 | 0.571 ± 0.021 | **0.297 ± 0.004** |
+
 # Diff-Aug: 	Аугментация изображений для задач детекции и сегментации на основе диффузионных нейронных сетей
 
 ## Требования
@@ -142,3 +159,20 @@ run_augmentation(
 Примеры генерации на датасете [Rooftops](https://universe.roboflow.com/snowcity/roof-jwa0b/dataset/10):
 
 ![image](https://github.com/CTLab-ITMO/diff-aug/assets/29786176/4781207b-5e04-4246-ad9a-1e97c6885d69)
+
+## Результаты детекции и сегментации:
+Для всех экспериментов мы использовали предобученную YOLOv8n с стандартными аугментациями.
+
+Результаты детекции на датасете [Potholes](https://universe.roboflow.com/final-project-iic7d/pothole-detection-system-new/dataset/1):
+| Данные          | Точность | Полнота | mAP50-95 |
+| ------------- |:---------:|:-----:|:-----:|
+| без нашей аугментации      | 0.647 ± 0.020 | 0.572 ± 0.010 | 0.304 ± 0.004 |
+| Diff-Aug (пред)            | 0.666 ± 0.019 | 0.552 ± 0.015 | **0.330 ± 0.003** |
+| Diff-Aug                   | 0.665 ± 0.012 | 0.565 ± 0.018 | **0.330 ± 0.004** |
+
+Результаты сегментации на датасете [Potholes](https://universe.roboflow.com/final-project-iic7d/pothole-detection-system-new/dataset/1):
+| Данные          | Точность | Полнота | mAP50-95 |
+| ------------- |:---------:|:-----:|:-----:|
+| без нашей аугментации      | 0.674 ± 0.012 | 0.556 ± 0.014 | 0.282 ± 0.004 |
+| Diff-Aug (пред)            | 0.666 ± 0.023 | 0.548 ± 0.013 | **0.294 ± 0.003** |
+| Diff-Aug                   | 0.660 ± 0.017 | 0.571 ± 0.021 | **0.297 ± 0.004** |
