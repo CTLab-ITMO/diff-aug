@@ -66,6 +66,10 @@ Generation examples on the [Potholes](https://universe.roboflow.com/final-projec
 
 ![image](https://github.com/CTLab-ITMO/diff-aug/assets/29786176/4d307bbd-bb97-42db-aec0-c66596ddd330)
 
+Generation examples on the [Rooftops](https://universe.roboflow.com/snowcity/roof-jwa0b/dataset/10) dataset:
+
+![image](https://github.com/CTLab-ITMO/diff-aug/assets/29786176/3259e468-a60a-446e-9850-f307138f5b2a)
+
 # Diff-Aug: 	Аугментация изображений для задач детекции и сегментации на основе диффузионных нейронных сетей
 
 ## Требования
@@ -134,3 +138,7 @@ run_augmentation(
 Примеры генерации на датасете [Potholes](https://universe.roboflow.com/final-project-iic7d/pothole-detection-system-new/dataset/1):
 
 ![image](https://github.com/CTLab-ITMO/diff-aug/assets/29786176/7eba75d1-f314-40cd-bd08-6782fea89fe7)
+
+Примеры генерации на датасете [Rooftops](https://universe.roboflow.com/snowcity/roof-jwa0b/dataset/10):
+
+![image](https://github.com/CTLab-ITMO/diff-aug/assets/29786176/4781207b-5e04-4246-ad9a-1e97c6885d69)
