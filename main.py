@@ -24,7 +24,7 @@ if __name__ == '__main__':
     parser.add_argument('--seed', type=int, required=True)
     args = parser.parse_args()
 
-    run_augmentation = run_augmentation(
+    run_augmentation(
         data_images_path=args.data_images_path,
         data_masks_path=args.data_masks_path,
         output_path=args.output_path,
