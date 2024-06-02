@@ -51,15 +51,15 @@ run_augmentation(
 
 ## Method schema:
 
-![my_method_v3](https://github.com/CTLab-ITMO/diff-aug/assets/29786176/f2cedf20-0175-4b8e-a960-9e22d811c3f8)
+![image](https://github.com/CTLab-ITMO/diff-aug/assets/29786176/5fc3d1e9-d417-492c-abfa-07fca36a434a)
 
-![my_method_v3_target_objects](https://github.com/CTLab-ITMO/diff-aug/assets/29786176/41fd8b68-3f55-476e-be44-fd1b1feab988)
+![image](https://github.com/CTLab-ITMO/diff-aug/assets/29786176/5e2ef05a-d858-418c-ae57-a061aced008a)
 
-![my_method_v3_features_1](https://github.com/CTLab-ITMO/diff-aug/assets/29786176/aa2ee428-436c-466f-9827-a161ccff02cd)
+![image](https://github.com/CTLab-ITMO/diff-aug/assets/29786176/fc234f32-dbde-424b-b868-f852f6ea5230)
 
-![my_method_v3_features_2](https://github.com/CTLab-ITMO/diff-aug/assets/29786176/b813f5a1-4744-4103-b1c9-0ef718c5a437)
+![image](https://github.com/CTLab-ITMO/diff-aug/assets/29786176/f2e6a0dd-436d-4c5c-a1f9-91bcf13c6200)
 
-![my_method_v3_controlnets](https://github.com/CTLab-ITMO/diff-aug/assets/29786176/ba9535b1-e668-4174-8aa2-aad36d70bf42)
+![image](https://github.com/CTLab-ITMO/diff-aug/assets/29786176/b4ffbd2f-59a7-4394-9d4c-b1d98fe206e5)
 
 ## Examples:
 Generation examples on the [Potholes](https://universe.roboflow.com/final-project-iic7d/pothole-detection-system-new/dataset/1) dataset:
