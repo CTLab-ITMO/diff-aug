@@ -49,6 +49,23 @@ run_augmentation(
 )
 ```
 
+## Method schema:
+
+![my_method_v3](https://github.com/CTLab-ITMO/diff-aug/assets/29786176/f2cedf20-0175-4b8e-a960-9e22d811c3f8)
+
+![my_method_v3_target_objects](https://github.com/CTLab-ITMO/diff-aug/assets/29786176/41fd8b68-3f55-476e-be44-fd1b1feab988)
+
+![my_method_v3_features_1](https://github.com/CTLab-ITMO/diff-aug/assets/29786176/aa2ee428-436c-466f-9827-a161ccff02cd)
+
+![my_method_v3_features_2](https://github.com/CTLab-ITMO/diff-aug/assets/29786176/b813f5a1-4744-4103-b1c9-0ef718c5a437)
+
+![my_method_v3_controlnets](https://github.com/CTLab-ITMO/diff-aug/assets/29786176/ba9535b1-e668-4174-8aa2-aad36d70bf42)
+
+## Examples:
+Generation examples on the [Potholes](https://universe.roboflow.com/final-project-iic7d/pothole-detection-system-new/dataset/1) dataset:
+
+![image](https://github.com/CTLab-ITMO/diff-aug/assets/29786176/4d307bbd-bb97-42db-aec0-c66596ddd330)
+
 # Diff-Aug: 	Аугментация изображений для задач детекции и сегментации на основе диффузионных нейронных сетей
 
 ## Требования
@@ -100,3 +117,20 @@ run_augmentation(
 )
 ```
 
+## Схема метода:
+
+![my_method_v3](https://github.com/CTLab-ITMO/diff-aug/assets/29786176/f2cedf20-0175-4b8e-a960-9e22d811c3f8)
+
+![my_method_v3_target_objects](https://github.com/CTLab-ITMO/diff-aug/assets/29786176/41fd8b68-3f55-476e-be44-fd1b1feab988)
+
+![my_method_v3_features_1](https://github.com/CTLab-ITMO/diff-aug/assets/29786176/aa2ee428-436c-466f-9827-a161ccff02cd)
+
+![my_method_v3_features_2](https://github.com/CTLab-ITMO/diff-aug/assets/29786176/b813f5a1-4744-4103-b1c9-0ef718c5a437)
+
+![my_method_v3_controlnets](https://github.com/CTLab-ITMO/diff-aug/assets/29786176/ba9535b1-e668-4174-8aa2-aad36d70bf42)
+
+## Примеры:
+
+Примеры генерации на датасете [Potholes](https://universe.roboflow.com/final-project-iic7d/pothole-detection-system-new/dataset/1):
+
+![image](https://github.com/CTLab-ITMO/diff-aug/assets/29786176/7eba75d1-f314-40cd-bd08-6782fea89fe7)
