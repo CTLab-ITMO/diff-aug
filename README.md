@@ -25,7 +25,7 @@ run.bat
 
 Before running the script, you need to modify the `run.bat` file to specify the augmentation parameters:
 1. `data_images_path` - path to the folder with images.
-2. `data_masks_path` - path to the folder with masks.
+2. `data_masks_path` - path to the folder with masks (masks are one channel images with 255-pixels for objects and 0-pixels for background).
 3. `output_path` - path to the output folder.
 4. `number_of_inpainted_images_per_image_required` - number of augmented images per image required.
 5. `main_canny_weight` - weight of the canny ControlNet for the main model.
@@ -114,7 +114,7 @@ run.bat
 
 Перед запуском скрипта вам необходимо изменить файл `run.bat`, чтобы указать параметры аугментации:
 1. `data_images_path` - путь к папке с изображениями.
-2. `data_masks_path` - путь к папке с масками.
+2. `data_masks_path` - путь к папке с масками (маски - это одноканальные изображения, где значения пикселей равны 255 для объектов и 0 для фона).
 3. `output_path` - путь к папке вывода.
 4. `number_of_inpainted_images_per_image_required` - количество аугментированных изображений на одно изображение.
 5. `main_canny_weight` - вес Canny ControlNet для основной модели.
